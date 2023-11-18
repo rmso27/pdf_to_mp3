@@ -7,8 +7,7 @@ audioEngine = pyttsx3.init() # Initialize
 for page in range(len(readPDF.pages)):
     text = readPDF.pages[page].extract_text() # Extract text from page
 
-# Generate .mp3 file
-audioEngine.save_to_file(text, 'test.mp3')
-audioEngine.say(text) # Play the text
+audioEngine.save_to_file(text, 'test.mp3') # Generate .mp3 file
+audioEngine.say(text)
 audioEngine.runAndWait()
 audioEngine.stop()
